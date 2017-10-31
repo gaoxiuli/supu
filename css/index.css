@@ -1,0 +1,58 @@
+.head{
+	height:10px;
+	width:100%;
+	background:#333333;
+	padding:10px 0;
+	line-height:10px;
+}
+.heading{
+	width: 1200px;
+    margin: 0 auto;
+}
+.headLeft{
+	color:#dbdbdb;
+	font-size:12px;
+	float: left;
+}
+.headLeft a{
+	color:#e5004a;
+}
+.headRight{
+	float:right;
+}
+.headLi{
+	display:inline-block;
+	padding:0 14px;
+}
+.headLi a{
+	color:#dbdbdb;
+	font-size:12px;
+	
+}
+.headLi a span{
+    background: url(../Img/index.png) no-repeat;
+	background-position: -14px 0;
+    width: 7px;
+    height: 6px;
+    display: inline-block;
+    margin-left: 6px;
+    
+}
+.headLi a:hover span{
+    background: url(../Img/index.png) no-repeat;
+	background-position:-32px 0;
+}
+.head-li{
+	position:relative;
+}
+.head-li ul{
+	display: none;
+	position:absolute;
+	top:20px;
+	left:0;
+	background:#333333;
+	font-size: 12px;
+}
+.head-li ul li{
+	padding:6px;
+}
