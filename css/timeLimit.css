@@ -1,0 +1,180 @@
+.public, .xstm, .timeLimit, .floor1 {
+  width: 1200px;
+  margin: 0 auto; }
+
+.xstm {
+  overflow: hidden;
+  line-height: 70px; }
+
+.xstmLeft {
+  float: left; }
+
+.xstmLeft span:nth-of-type(1) {
+  font-size: 22px;
+  line-height: 70px;
+  padding-left: 50px;
+  background: url(../img/index.png) no-repeat -88px -24px; }
+
+.xstmLeft span:nth-of-type(2) {
+  font-size: 12px;
+  color: #999896;
+  padding-left: 22px; }
+
+.xstmRight {
+  float: right;
+  font-size: 12px; }
+  .xstmRight a {
+    color: #D01744; }
+
+.timeLimit {
+  overflow: hidden; }
+  .timeLimit .tL {
+    width: 589px;
+    height: 275px;
+    float: left;
+    margin: 0 5px;
+    position: relative; }
+    .timeLimit .tL a {
+      position: relative;
+      display: block;
+      width: 589px;
+      height: 234px;
+      overflow: hidden; }
+      .timeLimit .tL a .tLt {
+        width: 589px;
+        height: 55px;
+        position: absolute;
+        top: 233px;
+        background: #FFFFFF; }
+      .timeLimit .tL a .tiL {
+        width: 470px;
+        height: 55px;
+        position: absolute;
+        top: 233px;
+        left: 118px; }
+        .timeLimit .tL a .tiL span:nth-of-type(1) {
+          float: left;
+          line-height: 55px;
+          font-size: 16px;
+          color: #000000; }
+        .timeLimit .tL a .tiL span:nth-of-type(2) {
+          float: right;
+          line-height: 55px;
+          font-size: 20px;
+          color: #D01744; }
+  .timeLimit .tLSpan {
+    float: right;
+    line-height: 38px;
+    font-size: 12px; }
+
+.mama01, .mama02, .mama03 {
+  width: 197px;
+  float: left; }
+
+.floor1 {
+  overflow: hidden;
+  background-color: turquoise;
+  border-top: 4px solid #c388b4;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e7e9e6; }
+  .floor1 .mama01 {
+    border: 1px solid #E7E9E6;
+    border-bottom: none;
+    background: #40E0D0; }
+    .floor1 .mama01 .floor1Title {
+      width: 197px;
+      height: 60px;
+      padding-top: 8px;
+      line-height: 52px;
+      text-align: center;
+      color: #FFFFFF;
+      font-size: 24px;
+      font-weight: 600px;
+      background: url(../img/floor1.png) no-repeat; }
+  .floor1 .floor1Ul {
+    height: 190px; }
+    .floor1 .floor1Ul ul li {
+      width: 95px;
+      line-height: 36px;
+      float: left;
+      text-align: center; }
+      .floor1 .floor1Ul ul li a {
+        font-size: 12px;
+        color: black; }
+        .floor1 .floor1Ul ul li a:hover {
+          color: #D01744; }
+  .floor1 .floor1Lunbo {
+    position: relative;
+    height: 180px;
+    width: 100%;
+    overflow: hidden; }
+    .floor1 .floor1Lunbo ol {
+      width: 100%; }
+      .floor1 .floor1Lunbo ol li {
+        width: 15px;
+        height: 30px;
+        position: absolute;
+        top: 80px; }
+      .floor1 .floor1Lunbo ol li:nth-of-type(1) {
+        background: url(../img/arrow_left.png) no-repeat; }
+      .floor1 .floor1Lunbo ol li:nth-of-type(2) {
+        left: 182px;
+        background: url(../img/arrow_right.png) no-repeat; }
+    .floor1 .floor1Lunbo ul {
+      width: 1200%;
+      overflow: hidden;
+      position: absolute; }
+      .floor1 .floor1Lunbo ul li {
+        margin-top: 20px;
+        width: 197px;
+        text-align: center;
+        float: left; }
+        .floor1 .floor1Lunbo ul li img {
+          margin: auto;
+          width: 84px;
+          height: 48px; }
+
+.mama02 {
+  width: 400px;
+  height: 440px;
+  overflow: hidden;
+  text-align: center; }
+  .mama02 img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    transition: all 1s; }
+    .mama02 img:hover {
+      transform: scale(1.1); }
+
+.mama03 {
+  height: 440px; }
+  .mama03 ul {
+    width: 597px;
+    height: 220px; }
+    .mama03 ul li {
+      padding-top: 15px;
+      width: 197px;
+      height: 220px;
+      float: left;
+      border: 1px solid #e7e9e6;
+      position: relative; }
+      .mama03 ul li a .mamaP1 {
+        text-align: center;
+        line-height: 28px;
+        font-size: 16px;
+        color: #000000; }
+      .mama03 ul li a .mamaP2 {
+        text-align: center;
+        line-height: 28px;
+        font-size: 14px;
+        color: #D01744; }
+      .mama03 ul li a img {
+        margin: 0 auto;
+        width: 102px;
+        height: 102px;
+        position: absolute;
+        top: 90px;
+        left: 50px; }
+
+/*# sourceMappingURL=timeLimit.css.map */

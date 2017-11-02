@@ -85,7 +85,6 @@ function timerXs(){
 			$(this).css("background","#D01744");
 			$(".zhengTimer").eq(index).css("display","block");
 		}
-		
 	})
 }
 //整点抢购物品
@@ -112,7 +111,6 @@ function zhengLunbo(){
 		if(i==-1840){
 			i=0;
 		}
-		
 	}
 	//划过li 定时器关闭
 	$(".zhengQiang").mouseenter(function(){
@@ -139,3 +137,81 @@ function zhengLunbo(){
 		}
 	})
 }
+//限时特卖
+xstm();
+function xstm(){
+	var timer=setInterval(fun,1000);
+	function fun(){
+		$(".tLSpan").each(function(index){
+			var xs=new Date("2017-11-11 00:00:00");
+			var now=new Date();
+			var t=(xs.getTime()-now.getTime())/1000;
+			var day=parseInt(t/3600/24);
+			var h=parseInt(t/3600-day*24);
+			var m=parseInt((t-h*3600-day*24*3600)/60);
+			var s=parseInt(t-h*3600-m*60-day*24*3600);
+			$(".tLSpan").eq(index).find("span").eq(0).html(day)
+											.end()
+											.eq(1).html(h)
+											.end()
+											.eq(2).html(m)
+											.end()
+											.eq(3).html(s);
+			
+			
+		})
+		
+	}
+}
+$(".tL").each(function(index){
+	$(".tL").eq(index).mouseenter(function(){
+		$(".tLt").eq(index).animate({"top":179},400,function(){
+			$(".tiL").eq(index).animate({"top":179},300)
+		})
+	})
+	$(".tL").eq(index).mouseleave(function(){
+		$(".tiL").eq(index).animate({"top":233},400);
+		$(".tLt").eq(index).animate({"top":233},400);
+		
+	})
+})
+
+mama()
+function mama(){
+		var x=0;
+	setInterval(function(){
+		$(".floor1Lunbo ul").animate({"left":x},1000,function(){
+			if(x<=-1182){
+				x=0;
+				$(".floor1Lunbo ul").css({"left":x});
+			}
+		});
+		x-=197;
+	},1500)
+	$(".floor1Lunbo ol li").eq(0).click(function(){
+		$(".floor1Lunbo ul").animate({"left":x},1000);
+		x-=197;
+	})
+	$(".floor1Lunbo ol li").eq(1).click(function(){
+		x+=197;
+		if(x>0){
+			x=-1182;
+		}
+		$(".floor1Lunbo ul").animate({"left":x},1000);
+	})
+}
+
+/*$(".mama02 img").hover(function(){
+	$(this).stop().animate({"width":"110%","height":"110%"},1000);
+},function(){
+	$(this).stop().animate({"width":"100%","height":"100%"},1000);
+})*/
+
+
+$(".mama03 li").each(function(index){
+	$(".mama03 li").eq(index).mouseover(function(){
+		$(this).find("img").stop().animate({"left":40})
+	}).mouseout(function(){
+		$(this).find("img").stop().animate({"left":50})
+	})
+})

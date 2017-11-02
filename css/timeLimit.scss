@@ -1,0 +1,220 @@
+.public{
+    width:1200px;
+    margin:0 auto;
+}
+.xstm{
+    @extend .public;
+    overflow:hidden;
+    line-height:70px;
+}
+.xstmLeft{
+    float:left;
+}
+.xstmLeft span:nth-of-type(1){
+    font-size:22px;
+    line-height:70px;
+    padding-left: 50px;
+    background: url(../img/index.png) no-repeat -88px -24px;
+}
+.xstmLeft span:nth-of-type(2){
+    font-size:12px;
+    color:#999896;
+    padding-left:22px;
+}
+.xstmRight{
+    float:right;
+    font-size:12px;
+    a{
+        color:#D01744;
+    }
+}
+//限时特卖
+.timeLimit{
+    @extend .public;
+    overflow: hidden;
+    .tL{
+        width:589px;
+        height:275px;
+        float:left;
+        margin:0 5px;
+        position:relative;
+        a{
+            position:relative;
+            display:block;
+            width:589px;
+            height:234px;
+            overflow: hidden;
+            .tLt{
+    //          top:233   179
+//              display: none;
+                width:589px;
+                height:55px;
+                position:absolute;
+                top:233px;
+                background:#FFFFFF;
+            }
+            .tiL{
+//              display: none;
+                width:470px;
+                height:55px;
+                position:absolute;
+                top:233px;
+                left:118px;
+                span:nth-of-type(1){
+                    float:left;
+                    line-height:55px;
+                    font-size:16px;
+                    color:#000000;
+                }
+                span:nth-of-type(2){
+                    float:right;
+                    line-height:55px;
+                    font-size:20px;
+                    color:#D01744;
+                }
+            }
+        }
+    }
+    .tLSpan{
+        float:right;
+        line-height:38px;
+        font-size:12px;
+    }
+}
+//妈妈专区
+.mama01,.mama02,.mama03{
+    width:197px;
+    float:left;
+}
+.floor1{
+    @extend .public;
+    overflow:hidden;
+    background-color: turquoise;
+    border-top:4px solid #c388b4;
+    margin-bottom: 30px;
+    border-bottom:1px solid #e7e9e6;
+    .mama01{
+        border:1px solid #E7E9E6;
+        border-bottom:none;
+        background: #40E0D0;
+        .floor1Title{
+            width:197px;
+            height:60px;
+            padding-top:8px;
+            line-height:52px;
+            text-align:center;
+            color:#FFFFFF;
+            font-size:24px;
+            font-weight: 600px;
+            background: url(../img/floor1.png) no-repeat;
+        }
+    }
+    .floor1Ul{
+        height:190px;
+        ul{
+            li{
+                width:95px;
+                line-height:36px;
+                float:left;
+                text-align: center;
+                a{
+                    &:hover{
+                        color:#D01744;
+                    }
+                    font-size:12px;
+                    color:black;
+                }
+            }
+        }
+    }
+    .floor1Lunbo{
+        position:relative;
+        height:180px;
+        width:100%;
+        overflow: hidden;
+        ol{
+            width:100%;
+            li{
+                width:15px;
+                height:30px;
+                position:absolute;
+                top:80px;
+            }
+            li:nth-of-type(1){
+                background:url(../img/arrow_left.png) no-repeat;
+            }
+            li:nth-of-type(2){
+                left:182px;
+                background:url(../img/arrow_right.png) no-repeat;
+            }
+        }
+        ul{
+            width:1200%;
+            overflow: hidden;
+            position:absolute;
+            li{
+                margin-top:20px;
+                width:197px;
+                text-align: center;
+                float:left;
+                img{
+                    margin:auto;
+                    width:84px;
+                    height:48px;
+                }
+            }
+        }
+    }
+}
+.mama02{
+    width:400px;
+    height:440px;
+    overflow: hidden;
+    text-align: center;
+    img{
+        width:100%;
+        height:100%;
+        margin:auto;
+        &:hover{
+            transform: scale(1.1);
+        }
+            transition: all 1s;
+    }
+}
+.mama03{
+    height:440px;
+    ul{
+        width:597px;
+        height:220px;
+        li{
+            padding-top:15px;
+            width:197px;
+            height:220px;
+            float:left;
+            border:1px solid #e7e9e6;
+            position:relative;
+            a{
+                .mamaP1{
+                    text-align:center;
+                    line-height:28px;
+                    font-size:16px;
+                    color:#000000;
+                }
+                .mamaP2{
+                    text-align: center;
+                    line-height:28px;
+                    font-size:14px;
+                    color:#D01744;
+                }
+                img{
+                    margin:0 auto;
+                    width:102px;
+                    height:102px;
+                    position:absolute;
+                    top:90px;
+                    left:50px;
+                }
+            }
+        }
+    }
+}
