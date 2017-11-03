@@ -119,9 +119,9 @@
         background: url(../img/arrow_right.png) no-repeat; }
     .floor1 .floor1Lunbo ul {
       width: 1200%;
-      position: absolute; }
+      position: absolute;
+      left: -197px; }
       .floor1 .floor1Lunbo ul li {
-        position: absolute;
         margin-top: 20px;
         width: 197px;
         text-align: center;

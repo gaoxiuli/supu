@@ -176,101 +176,15 @@ function xstm(){
 	})
 })*/
  
-	$(".tL").mouseenter(function(){
-		$(this).find( ".tLt" ).stop().animate({"top":179},400,function(){
-			$(this).next().stop().animate({"top":179},300)
-		})
-		 
+$(".tL").mouseenter(function(){
+	$(this).find( ".tLt" ).stop().animate({"top":179},400,function(){
+		$(this).next().stop().animate({"top":179},300)
 	})
-	$(".tL").mouseleave(function(){
-		$(this).find( ".tLt" ).stop().animate({"top":233},300).end().find(".tiL").stop().animate({"top":233},300)
-	})
-
-//妈妈专区轮播图
-$.ajax({
-	type:"get",
-	url:"main.json",
-	success:function(msg){
-		var flag=false;
-		var num1=0;
-		var num2=0;
-		var num3=0;
-		var num4=0;
-		var num0=0;
-//		var timer=setInterval(mm,2000);
-		/*for(let n = 0; n < 5; n++){
-//			mm(n);
-			var timer=setInterval(function(){
-				mm(n);
-			},2000);
-			console.log("timer"+timer);
-		}*/
-		var timer0=setInterval(num00,2000);
-		function num00(){
-			num0++;
-				if(num0==$(".floor1Lunbo ul").eq(0).find("li").length){
-					num0=0;
-				}
-				mm(0,num0);
-		}
-		var timer1=setInterval(num01,2000);
-		function num01(){
-			num1++;
-				if(num1==$(".floor1Lunbo ul").eq(1).find("li").length){
-					num1=0;
-				}
-				mm(1,num1);
-		}
-		var timer2=setInterval(num02,2000);
-		function num02(){
-			num2++;
-				if(num2==$(".floor1Lunbo ul").eq(2).find("li").length){
-					num2=0;
-				}
-				mm(2,num2);
-		}
-		var timer3=setInterval(num03,2000);
-		function num03(){
-			num3++
-				if(num3==$(".floor1Lunbo ul").eq(3).find("li").length){
-					num3=0;
-				}
-				mm(3,num3);
-		}
-		var timer4=setInterval(num04,2000);
-		function num04(){
-			num4++;
-			if(num4==$(".floor1Lunbo ul").eq(4).find("li").length){
-				num4=0;
-			}
-			mm(4,num4);
-		}
-		function mm(i,count,){
-				$(".floor1Lunbo ul").eq(i).find("li").css("left",msg.index.lunBo[1].left)
-				$(".floor1Lunbo ul").eq(i).find("li").eq(count).stop().animate({"left":msg.index.lunBo[0].left},1000,function(){
-																setTimeout(function(){
-																	$(this).stop().animate({"left":msg.index.lunBo[2].left},1000)
-																}.bind(this),500)
-													})
-				
-				//点击左边
-				/*$(".floor1Lunbo ol").eq(i).find("li").eq(0).click(function(){
-					$(".floor1Lunbo ul").eq(i).find("li").css("left",msg.index.lunBo[1].left)
-					$(".floor1Lunbo ul").eq(i).find("li").eq(count).stop().animate({"left":msg.index.lunBo[0].left},1000,function(){
-																setTimeout(function(){
-																	$(this).stop().animate({"left":msg.index.lunBo[2].left},1000)
-																
-																}.bind(this),500)
-														})
-				})
-				//点击右边
-				$(".floor1Lunbo ol li").eq(1).click(function(){
-					clearInterval(timer);
-				})*/ 
-		}
-    }
+	 
 })
-
+$(".tL").mouseleave(function(){
+	$(this).find( ".tLt" ).stop().animate({"top":233},300).end().find(".tiL").stop().animate({"top":233},300)
+})
 
 //mama03
 $(".mama03 li").each(function(index){
@@ -299,3 +213,4 @@ $(".navDl").mouseout(function(){
 	$(".navDl").find("i").css("color","#FFFFFF");
 	$(".navDl").find("dd").css("background","#D01744");
 })
+//楼梯效果
