@@ -1,0 +1,110 @@
+.navDl{
+    z-index:10;
+    width:206px;
+    border:2px solid #D01744;
+    position:absolute;
+    top:0;
+    left:0;
+    padding-bottom:40px;
+    background:#d01744 url(../img/cate_menu_bottom.jpg) 0px 446px no-repeat;
+}
+.navDl dt{
+    color:#FFFFFF;
+}
+.navDl dt,.navDl dd{
+    width:198px;
+    height:40px;
+    padding-left:10px;
+    line-height:40px;
+}
+.navDl dd i{
+    font-size:14px;
+    font-style:normal;
+    color:#FFFFFF;
+}
+.navDl dd span{
+    padding-left:30px;
+    background:url(../img/index.png) 5px -152px;
+}
+.navDl dd:nth-of-type(2) span{
+    background:url(../img/index.png) 5px -180px;
+}
+.navDl dd:nth-of-type(3) span{
+    background:url(../img/index.png) 5px -211px;
+}
+.navDl dd:nth-of-type(4) span{
+    background:url(../img/index.png) 5px -240px;
+}
+.navDl dd:nth-of-type(5) span{
+    background:url(../img/index.png) 5px -270px;
+}
+.navDl dd:nth-of-type(6) span{
+    background:url(../img/index.png) 5px -298px;
+}
+.navDl dd:nth-of-type(7) span{
+    background:url(../img/index.png) 5px -328px;
+}
+.navDl dd:nth-of-type(8) span{
+    background:url(../img/index.png) 5px -358px;
+}
+.navDl dd:nth-of-type(9) span{
+    background:url(../img/index.png) 5px -390px;
+}
+.navDl dd:nth-of-type(10) span{
+    background:url(../img/index.png) 5px -421px;
+}
+.navDl dd em{
+    margin-left:48px;
+    padding-right:30px;
+    background:url(../img/index.png) 215px -132px;
+}
+
+.list-item{
+    background:#FFFFFF;
+    width:800px;
+    height:442px;
+    position:absolute;
+    overflow: hidden;
+    top:38px;
+    left:208px;
+    border-right:2px solid #D01744;
+    border-bottom: 2px solid #D01744;
+    display: none;
+    ol{
+        padding-left:9px;
+        width:592px;
+        overflow: hidden;
+        p{
+            height:32px;
+            float:left;
+            font-size:12px;
+            color:#000000;
+            padding:0 15px;
+            font-weight: 600;
+        }
+        li{
+            width:470px;
+            float:left;
+            a{
+                line-height:14px;
+                float:left;
+                padding:0 9px;
+                margin-top:14px;
+                color:#646464;
+                font-size:12px;
+                border-left:1px solid #CFCFCF;
+                &:hover{
+                    color:#D01744;
+                }
+            }
+        }
+    }
+    .itemImg{
+        position:absolute;
+        top:0;
+        left:600px;
+        a{
+            display: block;
+        }
+    }
+}
