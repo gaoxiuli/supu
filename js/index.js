@@ -163,50 +163,87 @@ function xstm(){
 		
 	}
 }
-$(".tL").each(function(index){
+/*$(".tL").each(function(index){
 	$(".tL").eq(index).mouseenter(function(){
 		$(".tLt").eq(index).animate({"top":179},400,function(){
 			$(".tiL").eq(index).animate({"top":179},300)
 		})
 	})
 	$(".tL").eq(index).mouseleave(function(){
-		$(".tiL").eq(index).animate({"top":233},400);
-		$(".tLt").eq(index).animate({"top":233},400);
+		$(".tLt,.tiL").eq(index).animate({"top":233},400);
+		//$(".tiL").eq(index).animate({"top":233},400);
 		
 	})
-})
-
-mama()
-function mama(){
-		var x=0;
-	setInterval(function(){
-		$(".floor1Lunbo ul").animate({"left":x},1000,function(){
-			if(x<=-1182){
-				x=0;
-				$(".floor1Lunbo ul").css({"left":x});
-			}
-		});
-		x-=197;
-	},1500)
-	$(".floor1Lunbo ol li").eq(0).click(function(){
-		$(".floor1Lunbo ul").animate({"left":x},1000);
-		x-=197;
-	})
-	$(".floor1Lunbo ol li").eq(1).click(function(){
-		x+=197;
-		if(x>0){
-			x=-1182;
-		}
-		$(".floor1Lunbo ul").animate({"left":x},1000);
-	})
-}
-
-/*$(".mama02 img").hover(function(){
-	$(this).stop().animate({"width":"110%","height":"110%"},1000);
-},function(){
-	$(this).stop().animate({"width":"100%","height":"100%"},1000);
 })*/
+ 
+	$(".tL").mouseenter(function(){
+		$(this).find( ".tLt" ).stop().animate({"top":179},400,function(){
+			$(this).next().stop().animate({"top":179},300)
+		})
+		 
+	})
+	$(".tL").mouseleave(function(){
+		$(this).find( ".tLt" ).stop().animate({"top":233},300).end().find(".tiL").stop().animate({"top":233},300)
+	})
 
+//妈妈专区轮播图
+$.ajax({
+	type:"get",
+	url:"main.json",
+	success:function(msg){
+		var flag=false;
+		var count=$(".floor1Lunbo ul li").length;
+		var index=0;
+		var timer=setInterval(mm,2000);
+		function mm(){
+			$(".floor1Lunbo ul li").eq(index).stop().animate({"left":msg.index.lunBo[0].left},1000,function(){
+																setTimeout(function(){
+																	$(this).stop().animate({"left":msg.index.lunBo[2].left},1000)
+																
+																}.bind(this),500)
+															})
+									.siblings()
+									.css("left",msg.index.lunBo[1].left);
+			index++;
+			if(index==count){
+				index=0;
+			}
+			/*//左键
+			$(".floor1Lunbo ol li").eq(0).click(function(){
+				clearInterval(timer);
+				index--;
+				$(".floor1Lunbo ul li").eq(index).stop().animate({"left":msg.index.lunBo[0].left},1000)
+									.siblings()
+									.css("left",msg.index.lunBo[1].left);
+				if(index==0){
+					index=count-1;
+				}
+				flag=true;
+			})
+			//右键
+			$(".floor1Lunbo ol li").eq(1).click(function(){
+				clearInterval(timer);
+				$(".floor1Lunbo ul li").eq(index).stop().animate({"left":msg.index.lunBo[0].left},1000)
+									.siblings()
+									.css("left",msg.index.lunBo[1].left);
+				index++;
+				if(index==count){
+					index=0;
+				}
+				flag=true;
+			})
+			//点击1s后 开启定时器
+			$(".floor1Lunbo ol li").mouseout(function(){
+					timer=setInterval(mm,2000);
+			})*/
+			/*if(flag){
+				setTimeout(function(){
+				},1000)
+				flag=false;
+			}*/
+		}
+	}
+});
 
 $(".mama03 li").each(function(index){
 	$(".mama03 li").eq(index).mouseover(function(){
@@ -215,3 +252,5 @@ $(".mama03 li").each(function(index){
 		$(this).find("img").stop().animate({"left":50})
 	})
 })
+
+

@@ -1,4 +1,4 @@
-.public, .xstm, .timeLimit, .floor1 {
+.public, .xstm, .timeLimit, .floor1, .play, .foot .fooot02 .foot021 {
   width: 1200px;
   margin: 0 auto; }
 
@@ -73,14 +73,12 @@
 
 .floor1 {
   overflow: hidden;
-  background-color: turquoise;
   border-top: 4px solid #c388b4;
   margin-bottom: 30px;
   border-bottom: 1px solid #e7e9e6; }
   .floor1 .mama01 {
     border: 1px solid #E7E9E6;
-    border-bottom: none;
-    background: #40E0D0; }
+    border-bottom: none; }
     .floor1 .mama01 .floor1Title {
       width: 197px;
       height: 60px;
@@ -89,8 +87,7 @@
       text-align: center;
       color: #FFFFFF;
       font-size: 24px;
-      font-weight: 600px;
-      background: url(../img/floor1.png) no-repeat; }
+      font-weight: 600px; }
   .floor1 .floor1Ul {
     height: 190px; }
     .floor1 .floor1Ul ul li {
@@ -122,9 +119,9 @@
         background: url(../img/arrow_right.png) no-repeat; }
     .floor1 .floor1Lunbo ul {
       width: 1200%;
-      overflow: hidden;
       position: absolute; }
       .floor1 .floor1Lunbo ul li {
+        position: absolute;
         margin-top: 20px;
         width: 197px;
         text-align: center;
@@ -176,5 +173,109 @@
         position: absolute;
         top: 90px;
         left: 50px; }
+
+.floor1Title {
+  background: url(../img/floor1.png) no-repeat; }
+
+.floor2Title {
+  background: url(../img/floor2.png) no-repeat; }
+
+.floor3Title {
+  background: url(../img/floor3.png) no-repeat; }
+
+.floor4Title {
+  background: url(../img/floor4.png) no-repeat; }
+
+.floor5Title {
+  background: url(../img/floor5.png) no-repeat; }
+
+#muying {
+  margin-left: 10px;
+  background: url(../img/index.png) no-repeat -94px -485px; }
+
+.play {
+  margin-bottom: 40px;
+  overflow: hidden; }
+  .play .play01 {
+    float: left;
+    display: block;
+    width: 390px;
+    height: 125px;
+    margin-right: 10px; }
+
+.foot {
+  width: 100%;
+  padding-bottom: 17px;
+  background: #000; }
+  .foot .foot01 {
+    width: 100%;
+    background: #D01744;
+    overflow: hidden; }
+    .foot .foot01 ul {
+      width: 100%; }
+      .foot .foot01 ul li {
+        float: left;
+        width: 25%;
+        height: 106px;
+        position: relative; }
+        .foot .foot01 ul li img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto; }
+  .foot .fooot02 {
+    width: 100%;
+    border-bottom: 1px solid #666666; }
+    .foot .fooot02 .foot021 {
+      padding: 30px 0 15px;
+      overflow: hidden; }
+      .foot .fooot02 .foot021 dl {
+        padding: 0 76px;
+        float: left;
+        border-right: 1px solid #666666; }
+        .foot .fooot02 .foot021 dl dt {
+          font-size: 12px;
+          font-weight: 600;
+          color: #FFFFFF;
+          line-height: 30px; }
+        .foot .fooot02 .foot021 dl dd {
+          font-size: 12px;
+          color: #666666;
+          line-height: 30px; }
+          .foot .fooot02 .foot021 dl dd:hover {
+            color: #D01744; }
+      .foot .fooot02 .foot021 ul {
+        float: left;
+        padding: 0 30px; }
+  .foot .foot03 {
+    width: 100%; }
+    .foot .foot03 .foot031 {
+      width: 280px;
+      margin: 0 auto;
+      padding: 10px 0px; }
+      .foot .foot03 .foot031 ul {
+        overflow: hidden; }
+        .foot .foot03 .foot031 ul li {
+          color: #666666;
+          margin-top: 10px;
+          float: left; }
+          .foot .foot03 .foot031 ul li a {
+            padding: 0 7px;
+            font-size: 12px;
+            color: #666666; }
+            .foot .foot03 .foot031 ul li a:hover {
+              color: #D01744; }
+    .foot .foot03 .foot032 {
+      color: #666666;
+      font-size: 12px;
+      text-align: center; }
+    .foot .foot03 .foot033 {
+      width: 284px;
+      margin: 5px auto 0; }
+      .foot .foot03 .foot033 img {
+        padding: 3px 3px;
+        display: inline-block; }
 
 /*# sourceMappingURL=timeLimit.css.map */
