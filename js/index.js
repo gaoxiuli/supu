@@ -214,3 +214,36 @@ $(".navDl").mouseout(function(){
 	$(".navDl").find("dd").css("background","#D01744");
 })
 //楼梯效果
+//点击顶部，回到顶部
+$(".ding").click(function(){
+	$("html,body").animate({"scrollTop":0},1000,function(){
+		$("louti li:not(.ding)").css("background","#918888");
+	});
+})
+//点击左侧的楼梯号，出现对应的楼层
+$(".louti li:not(.ding)").click(function(){
+	$(this).css("background","#D01744")
+			.siblings()
+			.css("background","#918888");
+	$(".ding").css("background","#5E4A4A");
+	var _top=$(".Louti").eq($(this).index()).offset().top;//获取每个楼层的top值
+	$("body,html").animate({"scrollTop":_top},1000);
+})
+//触发滚动条，显示对应楼层号
+$(window).scroll(function(){
+	var scroll=$(document).scrollTop();
+	if(scroll>=460){
+		$(".louti").show(1000);
+	}else{
+		$(".louti").hide(1000)
+	}
+	$(".Louti").each(function(index){
+		if($(".Louti").eq(index).offset().top-scroll<$(".Louti").eq(index).height()/2){
+			count=index;
+		}
+	})
+	$(".louti li:not(.ding)").eq(count).css("background","#D01744")
+							.siblings()
+							.css("background","#918888");
+	$(".ding").css("background","#5E4A4A");
+})

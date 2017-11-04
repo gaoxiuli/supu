@@ -278,4 +278,33 @@
         padding: 3px 3px;
         display: inline-block; }
 
+.louti {
+  width: 34px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 252px;
+  margin: auto;
+  display: none; }
+  .louti ul li {
+    width: 34px;
+    height: 32px;
+    background: #918888;
+    border-bottom: 1px solid #b1aaaa;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 5px 0;
+    cursor: pointer; }
+  .louti ul .ding {
+    background: #5e4a4a;
+    height: 25px; }
+    .louti ul .ding div {
+      width: 0;
+      height: 0;
+      border: 5px solid transparent;
+      border-bottom-color: #FFFFFF;
+      margin: 0 auto; }
+
 /*# sourceMappingURL=timeLimit.css.map */
