@@ -1,0 +1,78 @@
+      .register .body .zhuce .top {
+        padding-top: 10px;
+        line-height: 50px;
+        height: 40px; }
+        .register .body .zhuce .top span:nth-of-type(1) {
+        	height:30px;
+          float: left;
+          font-size: 18px;
+          font-weight: 600; }
+        .register .body .zhuce .top span:nth-of-type(2) {
+        	height:30px;
+          float: right;
+          font-size: 12px; }
+          .register .body .zhuce .top span:nth-of-type(2) a {
+            font-size: 12px; }
+      .register .body .zhuce .bozi {
+        height: 30px;
+        background: pink;
+        font-size: 12px;
+        color: #D01744;
+        line-height: 25px;
+        margin-left: 59px;
+        padding-left: 30px;
+        background: url(img-register/login_icon.png) no-repeat 7px -240px; }
+      .register .body .zhuce label {
+        display: inline-block;
+        width: 65px;
+        font-size: 12px; }
+      .register .body .zhuce input {
+        width: 217px;
+        height: 34px;
+        font-size: 12px;
+        border: none;
+        background-color: #F3F3F3;
+        margin: 6px 0;
+        padding-left: 30px;
+        background-image: url(img-register/login_icon.png);
+        background-repeat: no-repeat; }
+      .register .body .zhuce input:nth-of-type(1) {
+        background-position: 7px -115px; }
+      .register .body .zhuce input:nth-of-type(2) {
+        background-position: 7px -172px; }
+      .register .body .zhuce input:nth-of-type(3) {
+        background-position: 7px -172px; }
+      .register .body .zhuce input:nth-of-type(5) {
+        background-image: url(img-register/index.png);
+        background-position: 9px 6px; }
+      .register .body .zhuce input:nth-of-type(4) {
+        background-position: 7px -294px; }
+      .register .body .zhuce input:nth-of-type(6) {
+        background-position: 7px -400px; }
+      .register .body .zhuce .yzmImg {
+        width: 56px;
+        background: yellowgreen;
+        height: 34px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 10px; }
+      .register .body .zhuce .tongyi {
+        font-size: 12px; }
+      .register .body .zhuce #yzmSpan {
+        font-size: 12px; }
+      .register .body .zhuce #yzm {
+        width: 98px; }
+      .register .body .zhuce #cbx {
+        width: 12px;
+        height: 12px; }
+      .register .body .zhuce #btn {
+        width: 230px;
+        height: 45px;
+        background: #D01744;
+        font-size: 20px;
+        color: #FFFFFF;
+        padding-left: 0;
+        margin-left: 40px; }
+  
+
+/*# sourceMappingURL=register.css.map */

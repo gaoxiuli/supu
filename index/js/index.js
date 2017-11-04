@@ -36,8 +36,8 @@ $("#bannerSpan1").click(function(){
 		indexBanner=$(".banner ul li").length;
 	}
 	indexBanner--;
-	console.log($(".banner ul li").length)
-	console.log(indexBanner)
+//	console.log($(".banner ul li").length)
+//	console.log(indexBanner)
 	banner();
 })
 $("#bannerSpan2").click(function(){
@@ -230,6 +230,7 @@ $(".louti li:not(.ding)").click(function(){
 	$("body,html").animate({"scrollTop":_top},1000);
 })
 //触发滚动条，显示对应楼层号
+var count=0;
 $(window).scroll(function(){
 	var scroll=$(document).scrollTop();
 	if(scroll>=460){
@@ -246,4 +247,8 @@ $(window).scroll(function(){
 							.siblings()
 							.css("background","#918888");
 	$(".ding").css("background","#5E4A4A");
+})
+//新人注册有奖
+$(".bottom div").click(function(){
+	$(".bottom").css("display","none");
 })
