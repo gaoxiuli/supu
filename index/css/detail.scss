@@ -19,6 +19,7 @@
     }
 }
 .detail-left{
+    position:relative;
     float:left;
     width:420px;
 }
@@ -39,23 +40,25 @@
         }
         .detail-fd-big{
             display: none;
+            z-index:100;
             position:absolute;
             top:0;
             left:420px;
-            width:360px;
-            height:360px;
+            width:228.6px;
+            height:228.6px;
             overflow: hidden;
             border:1px solid #E6E6E6;
-            background: pink;
             img{
                 width:480px;
                 height:480px;
+                position:absolute;
             }
         }
         .detail-fd-zzc{
-            width:183px;
-            height:183px;
-            z-index:10;
+            display: none;
+            width:200px;
+            height:200px;
+            z-index:2;
             position:absolute;
             top:0;
             left:0;
@@ -63,9 +66,20 @@
             border:1px solid #E6E6E6;
         }
     }
+    .detail-fd-right{
+         width:15px;
+            height:25px;
+            margin-top:30px;
+            position:absolute;
+            top:423px;
+            left:410px;
+            float:right;
+            background: url(../img/index.png) no-repeat -122px -256px;
+    }
     .detail-fd-small-bottom{
-        width:420px;
+        width:405px;
         height:84px;
+        overflow: hidden;
         .detail-fd-left,.detail-fd-right{
             float:left;
             width:15px;
@@ -76,15 +90,20 @@
             background: url(../img/index.png) no-repeat -100px -256px;
         }
         .detail-fd-right{
-            float:right;
-            background: url(../img/index.png) no-repeat -122px -256px;
+           
         }
         ul{
             width:1000%;
             li{
+                width:64px;
+                height:64px;
                 float:left;
                 border:1px solid #e6e6e6;
                 margin:10px 6px;
+                img{
+                    width:100%;
+                    height:100%;
+                }
             }
         }
     }
@@ -222,15 +241,20 @@
             margin:0 30px;
             width:139px;
             float:left;
-            position:relative;
-            background: url(../detail-img/arrow_up.png) no-repeat 124px 6px;
+            position:absolute;
+            left:750px;
+            background-image: url(../detail-img/arrow_up.png);
+            background-repeat: no-repeat;
+            background-position: 124px 6px;;
             line-height:24px;
             .detail-right120{
+                background-color:#FFFFFF ;
                 display: none;
+                width:254px;
                 position:absolute;
                 top:24px;
-                left:0;
-                border:1px solid #E6E6E6;
+                left:-1px;
+                border:1px solid #918888;
                 border-top:none;
                 padding:2px;
             }
@@ -238,6 +262,7 @@
         .detail-right10{
             float:left;
             margin-top:4px;
+            margin-left:199px;
         }
     }
     .detail-right05{
@@ -328,6 +353,8 @@
             text-align: center;
             float:left;
             margin-left:105px;
+            color:#FFFFFF;
+            font-size:16px;
         }
         .detail-right17{
             width:164px;
@@ -357,6 +384,9 @@
                 background: url(../img/index.png) no-repeat -153px -284px;
                 font-size:12px;
                 line-height:40px;
+                &:hover{
+                    color:#D01744;
+                }
             }
         }
     }
@@ -510,13 +540,14 @@
     }
 }
 .detail-spxq,.detail-sppj,.detail-cjwt{
+    display: none;
     background: #FFFFFF;
     position:relative;
     top:0px;
     left:0px;
 }
 .detail-spxq{
-    display: none;
+    display: block;
 }
 //.detail-tbtj{
 //  overflow: hidden;
@@ -558,5 +589,28 @@
         border-bottom:1px solid #E6E6E6;
         background: #F1F6F9;
         line-height:36px;
+    }
+}
+.detail-pl{
+    li{
+        font-size:12px;
+        padding-left:15px;
+        line-height:50px;
+        border-bottom:1px solid #E6E6E6;
+    }
+}
+.detail-cjwt{
+    overflow: hidden;
+    padding-left:10px;
+    color:#646464;
+    div{
+        margin-top:25px;
+        font-size:12px;
+        h3{
+            font-weight: 600;   
+        }
+        p{
+            line-height:30px;
+        }
     }
 }

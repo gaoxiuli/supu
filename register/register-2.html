@@ -2,10 +2,11 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>速普新人注册</title>
+		<title>欢迎登陆</title>
 		<link rel="stylesheet" type="text/css" href="../index/css/public.css"/>
-		<link rel="stylesheet" type="text/css" href="public-register.css"/>
 		<link rel="stylesheet" type="text/css" href="register-2.css"/>
+		<link rel="stylesheet" type="text/css" href="register-1.css"/>
+		<script src="../index/js/jquery-1.11.3.js"></script>
 	</head>
 	<body>
 		<div class="register">
@@ -20,15 +21,29 @@
 			<!--登录-->
 			<div class="body">
 				<div class="zhuce">
+					<div class="top"><span>用户注册</span><span>已有账号？<a href="#">立即登录</a></span></div>
+					<div class="bozi">你好，用户名错误</div>
+					<form action="file:///E:/gxl--project/supu/register/register-2.html" >
+						<label>用户名：</label><input id="uname" placeholder="4-20位字符，可由中英文、数字"_"、"-""组成 />
+						<label>设置密码：</label><input id="pwd" type="text" placeholder="6-16位字符，必须包含英文字母和数字" />
+						<label>确认密码：</label><input id="qpwd" type="text" placeholder="请输入确认密码" />
+						<label>电子邮箱：</label><input id="email" type="text" placeholder="找回密码唯一途径，请填写真实邮箱" />
+						<label>宝宝生日：</label><input id="birthday" type="text" placeholder="请输入宝宝生日" />
+						<label>验证码：</label><input type="text" placeholder="请输入图片中的字" id="yzm"/><div class="yzmImg"></div><span id="yzmSpan">换一张</span>
+						<label> </label><input type="checkbox" id="cbx"/><span class="tongyi">我已阅读并同意<a href="#">《速普商城用户协议》</a></span>
+						<input type="button" value="立即注册" id="btn" <!--onclick="return check(this.form)-->"/>
+					</form>
+				</div>
+				<div class="zhuce2">
 					<div class="top"><span>用户登录</span><span>没有速普账号？<a href="#">立即注册</a></span></div>
 					<div class="bozi">你好，用户名错误</div>
-					<label>用户名：</label><input type="text"/>
-					<label>密码：</label><input type="text"/>
-					<div class="huadong">按住滑块拖动到最后
+					<label>用户名：</label><input type="text" id="uname">
+					<label>密码：</label><input type="text" id="pwd">
+					<div class="huadong"><span>按住滑块拖动到最后</span>
 						<div class="huakuai"></div>
 					</div>
 					<div class="jz">
-						<input type="checkbox" />记住用户名
+						<input type="checkbox" id="jizhu" />记住用户名
 						<input type="checkbox" checked="checked" />自动登录
 						<span>忘记密码了?</span>
 					</div>
@@ -68,3 +83,5 @@
 		</div>
 	</body>
 </html>
+<script src="register.js"></script>
+<script src="cookie.js"></script>

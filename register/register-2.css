@@ -1,19 +1,30 @@
-      .register .body .zhuce .top {
+.zhuce2 {
+      width: 312px;
+      height: 444px;
+      background: #FFFFFF;
+      position: absolute;
+      top: 20px;
+      right: 100px;
+      padding: 0 30px;
+      color: #000000; }
+      .register .body .zhuce2 .top {
         padding-top: 21px;
         line-height: 50px;
         height: 55px; }
-        .register .body .zhuce .top span:nth-of-type(1) {
+        .register .body .zhuce2 .top span:nth-of-type(1) {
           float: left;
           font-size: 18px;
           font-weight: 600; }
-        .register .body .zhuce .top span:nth-of-type(2) {
+        .register .body .zhuce2 .top span:nth-of-type(2) {
         	height:30px;
           float: right;
           font-size: 12px; }
-          .register .body .zhuce .top span:nth-of-type(2) a {
+          .register .body .zhuce2 .top span:nth-of-type(2) a {
           	height:30px;
-            font-size: 12px; }
-      .register .body .zhuce .bozi {
+            font-size: 12px;
+            color:#137ce9;
+             }
+      .register .body .zhuce2 .bozi {
         height: 40px;
         background: pink;
         font-size: 12px;
@@ -23,12 +34,12 @@
         padding-left: 30px;
         background: url(img-register/login_icon.png) no-repeat 7px -232px; }
         
-.zhuce label{
+.zhuce2 label{
 	width:65px;
 	font-size:12px;
 	display:inline-block;
 }
-.zhuce input{
+.zhuce2 input{
 	width:217px;
 	height:34px;
 	border:none;
@@ -38,10 +49,10 @@
 	background-image: url(img-register/login_icon.png);
 	background-repeat: no-repeat;
 }
-.zhuce input:nth-of-type(1){
+.zhuce2 input:nth-of-type(1){
 	background-position: 7px -115px;
 }
-.zhuce input:nth-of-type(2){
+.zhuce2 input:nth-of-type(2){
 	background-position: 7px -172px;
 }
 .huadong{
@@ -49,11 +60,11 @@
 	height:40px;
 	background: #f29dba;
 	text-align: center;
+	position:relative;
     color: #ffffff;
     line-height: 40px;
     font-size: 14px;
     margin-top: 10px;
-    position:relative;
     border-radius:4px ;
 }
 .huakuai{
@@ -79,24 +90,25 @@
 .jz span{
 	margin-left:44px;
 	color:#9f9f9f;
+	cursor: pointer;
 }
-#btn{
+.zhuce2 #btn{
 	width:313px;
 	color:#FFFFFF;
 	background: #D01744;
 	margin-top:10px;
 	padding-left:0;
 }
-#bottom-zhuce{
+.zhuce2 #bottom-zhuce{
 	margin-top:20px;
 }
-#bottom-zhuce a{
+.zhuce2 #bottom-zhuce a{
 	vertical-align: middle;
 	display: inline-block;
 	margin-left:10px;
 	line-height:30px;
 }
-#bottom-zhuce span{
+.zhuce2 #bottom-zhuce span{
 	font-size:12px ;
 	color:#777777;
 }
@@ -107,6 +119,7 @@
 	position:fixed;
 	top:0;
 	left:0;
+	display: none;
 }
 .zhmm{
 	width:296px;
