@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>速普列表页</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/tabControl.css"/>
+		<link rel="stylesheet" type="text/css" href="css/supu-public.css"/>
+		<script src="js/jquery-1.11.3.js"></script>
+	</head>
+	<body>
+		<!--head-->
+		<div id="item-list-head"></div>
+		<!--搜索-->
+		<div id="item-list-search"></div>
+		<!--选项卡-->
+		<div id="item-list-nav"></div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!--底部foot-->
+		<div id="item-list-foot"></div>	
+	</body>
+</html>
+		<!--<script src="js/public.js"></script>-->
+<script type="text/javascript">
+	$("#item-list-head").load("public.html .head");
+	$("#item-list-search").load("public.html .search");
+	$("#item-list-foot").load("public.html .foot");
+	$("#item-list-nav").load("public.html .nav",function(){
+		//head
+		$(".head-li").hover(function(){
+			$(this).find("ul").css("display","block");
+		},function(){
+			$(this).find("ul").css("display","none");
+		})
+		//list-item选项卡
+		$("#list").mouseover(function(){
+			$(".navDl").css("display","block")
+			
+		})
+		$("#list").mouseout(function(){
+			$(".navDl").css("display","none")
+		})
+		$(".navDl").find("dd").mouseover(function(){
+			$(this).css("background","white")
+					.siblings()
+					.css("background","#D01744");
+			$(".navDl").find("i").css("color","#FFFFFF");
+			$(this).find("i").css("color","#D01744");
+			$(".navDl").find("span").css("background-position-x","5px");
+			$(this).find("span").css("background-position-x","-30px");
+			$(".navDl").find(".list-item").css("display","none");
+			$(this).find(".list-item").css("display","block");
+		})
+		$(".navDl").mouseout(function(){
+			$(".navDl").find(".list-item").css("display","none");
+			$(".navDl").find("span").css("background-position-x","5px");
+			$(".navDl").find("i").css("color","#FFFFFF");
+		})
+		});
+</script>

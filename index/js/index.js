@@ -1,9 +1,3 @@
-//head
-$(".head-li").hover(function(){
-	$(this).find("ul").css("display","block");
-},function(){
-	$(this).find("ul").css("display","none");
-})
 //banner
 var indexBanner=0;
 function banner(){
@@ -195,24 +189,6 @@ $(".mama03 li").each(function(index){
 	})
 })
 
-//list-item选项卡
-$(".navDl").find("dd").mouseover(function(){
-	$(this).css("background","white")
-			.siblings()
-			.css("background","#D01744");
-	$(".navDl").find("i").css("color","#FFFFFF");
-	$(this).find("i").css("color","#D01744");
-	$(".navDl").find("span").css("background-position-x","5px");
-	$(this).find("span").css("background-position-x","-30px");
-	$(".navDl").find(".list-item").css("display","none");
-	$(this).find(".list-item").css("display","block");
-})
-$(".navDl").mouseout(function(){
-	$(".navDl").find(".list-item").css("display","none");
-	$(".navDl").find("span").css("background-position-x","5px");
-	$(".navDl").find("i").css("color","#FFFFFF");
-	$(".navDl").find("dd").css("background","#D01744");
-})
 //楼梯效果
 //点击顶部，回到顶部
 $(".ding").click(function(){

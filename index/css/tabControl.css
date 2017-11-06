@@ -1,22 +1,38 @@
+#list{
+    width: 211px;
+    position: absolute;
+}   
+	
+
 .navDl {
+	display: none;
   z-index: 10;
   width: 206px;
   border: 2px solid #D01744;
   position: absolute;
-  top: 0;
+  top: 38px;
   left: 0;
   padding-bottom: 40px;
-  background: #d01744 url(../img/cate_menu_bottom.jpg) 0px 446px no-repeat; }
-
-.navDl dt {
-  color: #FFFFFF; }
-
+  background: #d01744 url(../img/cate_menu_bottom.jpg) 0px 406px no-repeat; }
 .navDl dt, .navDl dd {
   width: 198px;
   height: 40px;
   padding-left: 10px;
   line-height: 40px; }
 
+.nav-top{
+  color: #FFFFFF; 
+	width: 198px;
+  height: 40px;
+  padding-left: 10px;
+  line-height: 40px;
+  border:1px solid #D01744;
+  border-bottom:none;
+  background: #D01744; 
+  position:absolute;
+  top:0px;
+  left:0px;
+}
 .navDl dd i {
   font-size: 14px;
   font-style: normal;
@@ -64,7 +80,7 @@
   height: 442px;
   position: absolute;
   overflow: hidden;
-  top: 38px;
+  top: 0px;
   left: 208px;
   border-right: 2px solid #D01744;
   border-bottom: 2px solid #D01744;
