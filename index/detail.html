@@ -10,6 +10,10 @@
 		<script src="js/jquery-1.11.3.js"></script>
 	</head>
 	<body>
+		<div class="index-top">
+			<img src="detail-img/index-top.jpg" />
+			<div class="ad-close"></div>
+		</div>
 		<!--head-->
 		<div id="item-list-head"></div>
 		<!--搜索-->
@@ -32,7 +36,6 @@
 				<div class="detail-fd-zzc"></div>
 			</div>
 			<div class="detail-fd-small-bottom">
-				<a class="detail-fd-left"></a>
 				<div class="detail-item">
 					<ul>
 						<li><img src="detail-img/1s.jpg"/></li>
@@ -45,6 +48,7 @@
 					</ul>
 				</div>
 			</div>
+				<a class="detail-fd-left"></a>
 				<a class="detail-fd-right"></a>
 			<div class="detail-fd-bottom01">
 				<span>分享</span>
@@ -95,10 +99,19 @@
 					<span>运费</span>
 					<span>至</span>
 					<div class="detail-right07">
-						北京
+						<div class="beijing">
+							北京
+						</div>
 						<div class="detail-right110">
+							<i></i>
 						<!--具体地址选择-->
-					</div>
+							<div class="sheng">省</div>
+							<div class="shi">市辖区</div>
+							<div class="qu">请选择区域</div>
+							<ul id="xuanze">
+								<!--<li>北京</li>-->
+							</ul>
+						</div>
 					</div>
 					<div class="detail-right12">
 						订单付满99元免运费
@@ -128,9 +141,12 @@
 					</div>
 				</div>
 				<div class="detail-right16">
-					<input type="button" value="加入购物车"/>
+					<input type="button" value="加入购物车" id="detail-gwc"/>
 					<div class="detail-right17"><a href="javascript:;"><i></i>客户端下单</a></div>
 					<div class="detail-right18"><a href="#">收藏商品</a></div>
+					<div class="detail-shangpin">
+						<img src="detail-img/1m.jpg" />
+					</div>
 				</div>
 			</div>
 		</div>
@@ -327,6 +343,15 @@
 			$(".navDl").find("i").css("color","#FFFFFF");
 			$(".navDl").find("dd").css("background","#D01744");
 		})
-				
+		//点击加入购物车
+		$("#detail-gwc").click(function(){
+			var num=parseInt($("#gouwuche").html());
+			num=num+parseInt($("#detail-right-center").val());
+			$(".detail-shangpin").css("display","block")
+			$(".detail-shangpin").animate({"left":0,"top":0,"width":0,"height":0},1000,function(){
+				$(".detail-shangpin").css({"display":"none","width":"50px","height":"50px","left":640,"top":638})
+			})
+			$("#gouwuche").html(num);
+		})
 	})
 </script>

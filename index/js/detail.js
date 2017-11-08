@@ -61,18 +61,15 @@ $(".detail-fd-small").mouseover(function(){
 			'left':-bigImgx,
 			"top":-bigImgy
 		})
-		
 	})
 }).mouseout(function(){
 	$(".detail-fd-big").hide();
 	$(".detail-fd-zzc").hide();
 })
-
-console.log($("#bigImg").width())
-console.log($("#small").width())
-console.log($(".detail-fd-big").width())
-console.log($(".detail-fd-zzc").width())
-
+		/*console.log($(".detail-fd-big img").width())
+		console.log($(".detail-fd-small img").width())
+		console.log($(".detail-fd-big").width())
+		console.log($(".detail-fd-zzc").width())*/
 
 $("#spxq").click(function(){
 	$(this).css({"background":"#ffffff","color":"#d01744"})
@@ -101,4 +98,87 @@ $("#cjwt").click(function(){
 	$(".detail-spxq").hide();
 	$(".detail-sppj").hide();
 	$(".detail-cjwt").show();
+})
+//左右点击图片改变
+$(".detail-fd-right").click(function(){
+	var leftItem=$(".detail-item").find("ul").position().left;
+	if($(".detail-item").find("ul").position().left>=16){
+		$(".detail-item ul").css("left","16px");
+	}else{
+		$(".detail-item ul").animate({"left":(leftItem+77)},1000)
+	}
+})
+$(".detail-fd-left").click(function(){
+	var leftItem=$(".detail-item").find("ul").position().left;
+	if(leftItem<=-138){
+		$(".detail-item ul").css("left","-138px");
+	}else{
+		$(".detail-item ul").animate({"left":(leftItem-77)},1000)
+	}
+})
+//吸顶效果
+$(window).scroll(function(){
+	var scr=$(document).scrollTop();
+	if(scr!=0){
+		$(".index-top").css({"position":"fixed"});
+	}else{
+		$(".index-top").css({"position":"relative"});
+	}
+})
+$(".ad-close").click(function(){
+	$(".index-top").css("display","none");
+})
+//收货地址选择
+$(".beijing").click(function(){
+	$(".detail-right110").css("display","block")
+	$.ajax({
+		type:"get",
+		url:"addr.json",
+		success:function(json){
+			var html="";
+			for(var i=0;i<json.shenghui.length;i++){
+				var item=json.shenghui[i];
+				html+=`<li>${item.shengming}</li>`;
+			}
+			$("#xuanze").html(html);
+			bgcolorLi();
+			$(".sheng").css({"background":"#fff","border-bottom":"1px solid #fff"});
+			$(".detail-right110").find("div").click(function(){
+				$(".detail-right110").find("div").css({"border-color":"#e3e3e3","background":"#f3f3f3"});
+				$(this).css({"background":"#fff","border-bottom":"1px solid #fff"});
+					for(var i=0;i<$("#xuanze").find("li").length;i++){
+						$("#xuanze").find("li").eq(i).remove();
+					}
+					var arr=[json.shenghui,json.shixian,json.quyu];
+					var html="";
+					var xz=arr[$(this).index()];
+					for(var i=0;i<xz.length;i++){
+						var item=xz[i];
+						if($(this).index()==0){
+							html+=`<li>${item.shengming}</li>`;
+						}
+						if($(this).index()==1){
+							html+=`<li>${item.shixiaqu}</li>`;
+						}
+						if($(this).index()==2){
+							html+=`<li>${item.qu}</li>`;
+						}
+					}
+					$("#xuanze").html(html);
+					bgcolorLi();
+			})
+			$(".detail-right110 i").click(function(){
+				$(".detail-right110").css("display","none")
+			})
+//			var 
+			function bgcolorLi(){
+				$("#xuanze").find("li").click(function(){
+						$(this).css({"background":"orange","color":"#fff"})
+								.siblings()
+								.css({"background":"#fff","color":"#666666"});
+					})
+			}
+			
+		}
+	})
 })

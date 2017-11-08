@@ -105,6 +105,8 @@
       .register .body .zhuce .yzmImg {
       	background:url(img-register/1.png) -10px -15px;
       	font-style: italic;
+      	line-height:34px;
+      	text-align: center;
         width: 56px;
         height: 34px;
         display: inline-block;

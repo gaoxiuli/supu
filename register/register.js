@@ -43,12 +43,14 @@ $(".zhuce2").find(".top").find("a").click(function(){
 		$(".zhuce2").animate({"left":400},1000)
 	});
 	$(".zhuce").animate({"left":800,"opacity":1},1000)
+	$(".header").find("div").html("欢迎注册");
 })
 $(".zhuce").find(".top").find("a").click(function(){
 	$(".zhuce").animate({"left":"1300","opacity":0},1000,function(){
 		$(".zhuce").animate({"left":400},1000)
 	});
 	$(".zhuce2").animate({"left":800,"opacity":1},1000)
+	$(".header").find("div").html("欢迎登陆");
 })
 //用户注册
 //验证码
@@ -136,23 +138,88 @@ function check(){
 		if(check()){
 			var _json={
 				"uname":$("#uname").val(),
-				"pwd":$("#pwd").val()
+				"pwd":$("#pwd").val(),
+				"email":$("#email").val()
 			}
-			setCookie("user",JSON.stringify(_json));
+			setCookie("user",JSON.stringify(_json),1);
+//			console.log( getCookie("user") );
 			$(".zhuce").animate({"left":"1300","opacity":0},700,function(){
 				$(".zhuce").animate({"left":400},1000);
 			});
 			$(".zhuce2").animate({"left":800,"opacity":1},700);
+			location.reload();
 		}
 	})
 //用户登录
-	denglu()
 function denglu(){
-	var user=getCookie("user");
-	console.log(user);
-	var str=user.split(",")[0];
-	console.log(str)
+	var flagUname=true;
+	var flagPwd=true;
+	var user=JSON.stringify(getCookie("user"));
+//	console.log(user)
+	var str1=user.split(",")[0];
+	var str2=user.split(",")[1];
+	str1=JSON.parse(str1.split(":")[1]);
+	str2=JSON.parse(str2.split(":")[1]);
+//	str2=JSON.parse(str2.split("}")[0]);
+//	console.log(str1)
+//	console.log(str2)
 	var uname2=$(".zhuce2 #uname").val();
 	var upwd2=$(".zhuce2 #pwd").val();
-//	if(uname2==)
+//	console.log(typeof uname2);
+//	console.log(upwd2)
+	if(!flagHuadong){
+		$(".zhuce2 .bozi").slideDown(700);
+		$(".zhuce2 .bozi").html("请拖动滑块进行验证");
+		flagHuadong=false;
+	}
+	if(upwd2!=str2){
+		$(".zhuce2 .bozi").slideDown(700);
+		$(".zhuce2 .bozi").html("密码输入错误");
+		flagPwd=false;
+	}
+	if(uname2!=str1){
+		$(".zhuce2 .bozi").slideDown(700);
+		$(".zhuce2 .bozi").html("用户名输入有误");
+		flagUname=false;
+	}
+	if(flagUname&&flagPwd&&flagHuadong){
+		return true;
+	}
 }
+//点击登录
+$(".zhuce2 #btn").click(function(){
+	console.log($(".zhuce2 #pwd").val())
+	if(denglu()){
+		location.href= "../index/index.html";
+	}
+})
+//找回密码
+
+$(".zhmm-yzm").html(yzm());
+function zhmm(){
+	var flagYzm=true;
+	var flagEmail=true;
+	var users=JSON.stringify(getCookie("user"));
+	var str1=users.split(",")[2];
+	str1=str1.split(":")[1];
+	str1=JSON.parse(str1.split("}")[0]);
+	if($(".zhmm-yzm").html()!=$("#zhmm-yzm").val()){
+		flagYzm=false;
+	}
+	if($("#zhmm-txt").val()!=str1){
+		flagEmail=false;
+	}
+	if(flagYzm&&flagEmail){
+		return true;
+	}
+//	console.log(str1);
+}
+$("#zhmm-btn").click(function(){
+	if(zhmm()){
+		alert("验证成功");
+		$(".zzc").css("display","none")
+	}else{
+		alert("验证错误")
+	}
+	
+})

@@ -36,7 +36,7 @@
 				</div>
 				<div class="zhuce2">
 					<div class="top"><span>用户登录</span><span>没有速普账号？<a href="#">立即注册</a></span></div>
-					<div class="bozi">你好，用户名错误</div>
+					<div class="bozi" style="display: none;">你好，用户名错误</div>
 					<label>用户名：</label><input type="text" id="uname">
 					<label>密码：</label><input type="text" id="pwd">
 					<div class="huadong"><span>按住滑块拖动到最后</span>
@@ -69,8 +69,8 @@
 				<div class="zhmm-cuowu">
 					账户和密码不能为空
 				</div>
-				<input type="text" placeholder="输入邮箱号、手机号" />
-				<input type="text" placeholder="输入验证码" /><div class="zhmm-yzm"></div>
+				<input type="text" placeholder="输入邮箱号、手机号" id="zhmm-txt"/>
+				<input type="text" placeholder="输入验证码" id="zhmm-yzm" /><div class="zhmm-yzm"></div>
 				<input type="text" placeholder="手机、邮箱验证码"/><input type="button" value="获取验证码" class="hqyzm"/>
 				<input type="button" name="" id="zhmm-btn" value="验证" />
 				<div class="zhmm-bottom">
@@ -83,5 +83,5 @@
 		</div>
 	</body>
 </html>
-<script src="register.js"></script>
 <script src="cookie.js"></script>
+<script src="register.js"></script>

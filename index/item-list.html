@@ -6,32 +6,107 @@
 		<link rel="stylesheet" type="text/css" href="css/public.css"/>
 		<link rel="stylesheet" type="text/css" href="css/tabControl.css"/>
 		<link rel="stylesheet" type="text/css" href="css/supu-public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/list.css"/>
 		<script src="js/jquery-1.11.3.js"></script>
 	</head>
 	<body>
+		<div class="index-top">
+			<img src="detail-img/index-top.jpg" />
+			<div class="ad-close"></div>
+		</div>
 		<!--head-->
 		<div id="item-list-head"></div>
 		<!--搜索-->
 		<div id="item-list-search"></div>
 		<!--选项卡-->
 		<div id="item-list-nav"></div>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		<div class="list-body">
+			<div class="list-nav">
+				<a href="index.html">首页</a>&gt;<a href="#">喂养洗护</a>&gt;
+			</div>
+			<div class="list01">
+				<div class="list01-left">
+					<div class="list01-left-top">
+						<span class="list01-left-top-span">
+							喂养用品
+						</span>
+					</div>
+					<ul class="list01-left-ul">
+						<li><a href="#">奶瓶奶嘴</a></li>
+						<li><a href="#">水杯/水壶</a></li>
+						<li><a href="#">盘碗叉勺</a></li>
+						<li><a href="#">安抚/牙胶</a></li>
+						<li><a href="#">暖奶消毒</a></li>
+						<li><a href="#">辅食料理机</a></li>
+						<li><a href="#">辅助配件</a></li>
+					</ul>
+					<div class="list01-left-top">
+						<span class="list01-left-top-span">
+							洗护用品
+						</span>
+					</div>
+					<ul class="list01-left-ul">
+						<li><a href="#">宝宝洗浴</a></li>
+						<li><a href="#">宝宝护肤</a></li>
+						<li><a href="#">奶瓶清洗</a></li>
+						<li><a href="#">洗衣液/皂</a></li>
+						<li><a href="#">日常护理</a></li>
+					</ul>
+				</div>
+				<div class="list01-right">
+					<div class="list01-right-title">
+						<span>品牌：</span>
+						<a href="#">贝亲Pigeon</a>
+					</div>
+					<div class="list01-right-paixu">
+						<span>排序：</span>
+						<a href="javascript:;">销量&nbsp;↓</a>
+						<a href="javascript:;">价格&nbsp;↓</a>
+						<a href="javascript:;">好评&nbsp;↓</a>
+					</div>
+					<div class="list01-right-xinxi">
+						<ul class="list01-rightUl">
+							<!--<li>
+								<a href="detail.html" class="list01-rightLi">
+									<img src="list-img/1.jpg" />
+									<div class="list01-rightDiv01"><span>满99立减15/</span><span>Pigeon贝亲 自然实感宽口径奶嘴S(BA86)</span></div>
+									<div class="list01-rightDiv02"><span>￥49</span><span>满额立减</span></div>
+									<div class="list01-rightDiv03">
+										<div class="list01-rightDiv031">
+											<span>1</span>
+											<div class="list01-right-jia">+</div>
+											<div class="list01-right-jian">-</div>
+										</div>
+										<div class="list01-rightDiv031 list01-rightDiv032">加入购物车</div>
+										<div class="list01-rightDiv031 list01-rightDiv033">收藏</div>
+									</div>
+								</a>
+							</li>-->
+							
+						</ul>
+						<div class="list01-fenye">
+							<ul class="fenye">
+								<li>尾页</li>
+								<li class="xiayiye">下一页</li>
+								<li>5</li>
+								<li>4</li>
+								<li>3</li>
+								<li>2</li>
+								<li>1</li>
+								<li>首页</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		
 		
 		<!--底部foot-->
-		<div id="item-list-foot"></div>	
+		<div id="item-list-foot" style="clear: both;"></div>	
 	</body>
 </html>
-		<!--<script src="js/public.js"></script>-->
+<script src="js/list.js"></script>
 <script type="text/javascript">
 	$("#item-list-head").load("public.html .head");
 	$("#item-list-search").load("public.html .search");
